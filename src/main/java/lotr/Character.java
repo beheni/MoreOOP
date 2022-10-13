@@ -29,9 +29,9 @@ public abstract class Character {
 
     @Override
     public String toString() {
-        return "Character{" +
-                "power=" + power +
-                ", hp=" + hp +
+        return this.getClass().getSimpleName()+"{" +
+                "hp=" + hp +
+                ", power=" + power +
                 '}';
     }
 }
