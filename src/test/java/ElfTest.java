@@ -21,6 +21,7 @@ public class ElfTest {
     @Test
     public void testKick() {
         Hobbit hobbit = new Hobbit();
+        System.out.println();
         character.kick(hobbit);
         assertEquals(0, hobbit.getHp());
     }

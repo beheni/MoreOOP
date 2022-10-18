@@ -1,18 +1,17 @@
 package lotr;
 
+import kick.NobleKick;
+
 import java.util.Random;
 
-public class Knight extends Character {
+public class Knight extends Noble {
+    NobleKick ability = new NobleKick();
     public Knight(){
         super(2,2);
-        Random rand = new Random();
-        setHp(getHp()+rand.nextInt(10));
-        setPower(getPower()+rand.nextInt(10));
     }
     @Override
     public void kick(Character c) {
-        Random rand = new Random();
-        c.setHp (c.getHp()- rand.nextInt(this.getPower()));
+        ability.kick(c);
     }
     @Override
     public String toString() {

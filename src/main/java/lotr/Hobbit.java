@@ -1,6 +1,7 @@
 package lotr;
-
+import kick.CryKick;
 public class Hobbit extends Character {
+    CryKick ability = new CryKick();
     public Hobbit(){
         super(3,0);
     }
@@ -8,9 +9,8 @@ public class Hobbit extends Character {
     public String toString() {
         return super.toString();
     }
-    public void toCry(){
-        System.out.println("Is crying....(ɵ̥̥︹ɵ̥̥)");
-    }
     @Override
-    public void kick(Character c) {toCry();}
+    public void kick(Character c) {
+        ability.kick(c);
+    }
 }

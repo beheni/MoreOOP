@@ -1,16 +1,12 @@
 package lotr;
-
+import kick.BasicKick;
 public class Elf extends Character{
+    BasicKick ability = new BasicKick();
     public Elf(){super(10,10);
 }
     @Override
     public void kick(Character c) {
-        if(this.getPower()>c.getPower()){
-            c.setHp(0);
-        }
-        else {
-            c.setHp(c.getHp()-1);
-        }
+        ability.kick(c);
     }
     @Override
     public String toString() {
